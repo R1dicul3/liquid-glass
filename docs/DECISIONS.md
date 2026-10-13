@@ -12,7 +12,7 @@ what **you** need to do / decide. Read this last.
 | Hero geometry | glass **tumbler (rocks glass)** + liquid volume, procedural lathe | shows refraction through thick walls + deep liquid; reliable |
 | Secondary meshes | engine basic shapes (cube=ice, sphere=stone, slab=table) | token-cheap, zero-risk, reads clearly |
 | Units | Unreal Units = cm (glass ≈ 8.7 cm tall) | physical plausibility |
-| Interaction | C++ drag-to-orbit + tweak keys (VS2026 toolchain confirmed) | proper decoupled module, no hand-authored Blueprint graphs |
+| Interaction | flying-spectator orbit (built-in) + `tune.py`; C++ tweak panel **written, opt-in** | C++ build was blocked by your open editor (Live Coding); see ACTIVATE_CPP.md |
 | Tweak surface | MPC + `tune.py` (JSON) + C++ in-game panel | Remote-Control *Python* API is absent in 5.8 |
 
 ## 2. What I could NOT do (and why)
@@ -38,6 +38,9 @@ what **you** need to do / decide. Read this last.
    stills) once the look is dialled in.
 5. **Decide glass style** — currently a tumbler; the lathe pipeline can emit a wine glass
    or martini profile by editing `make_meshes.py` `_rounded_outer/_rounded_inner`.
+6. **Activate the C++ tweak panel (optional)** — close the editor, run
+   `powershell -ExecutionPolicy Bypass -File tools\activate_cpp.ps1`, reopen. Until then the
+   demo already works: built-in flying camera + `py scripts/tune.py` + the MPC panel.
 
 ## 4. Open questions (non-blocking)
 - Do you want a **wine glass** instead of / in addition to the tumbler?
