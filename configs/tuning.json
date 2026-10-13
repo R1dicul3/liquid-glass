@@ -1,12 +1,10 @@
 {
-  "comment": "Tunable physical/rendering parameters. Applied to MPC_LiquidGlass by scripts/tune.py (editor) or the in-game tweak keys.",
+  "comment": "Tunable physical/rendering parameters. Applied by scripts/tune.py (editor) or the in-game tweak keys.",
   "scalars": {
     "GlassIOR": 1.50,
     "GlassRoughness": 0.02,
     "LiquidIOR": 1.33,
     "LiquidRoughness": 0.04,
-    "LiquidAbsorption": 0.30,
-    "LiquidScattering": 0.02,
     "IceIOR": 1.31,
     "IceRoughness": 0.06,
     "KeyLightIntensity": 1.0,
@@ -15,6 +13,7 @@
   },
   "vectors": {
     "LiquidColor": [0.52, 0.30, 0.11],
+    "LiquidMFP": [2.0, 1.0, 0.45],
     "GlassTint": [1.0, 1.0, 1.0],
     "IceColor": [0.88, 0.94, 1.0],
     "TableColor": [0.17, 0.15, 0.13],
