@@ -16,6 +16,9 @@ Build/
 .vscode/
 .idea/
 
+# ===== build outputs / logs (local) =====
+outputs/
+
 # ===== Python =====
 __pycache__/
 *.py[cod]
