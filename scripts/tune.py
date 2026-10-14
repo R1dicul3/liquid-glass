@@ -5,11 +5,12 @@ Run live in the editor to tweak by eye:
     py scripts/tune.py
 """
 import json
+import os
 import unreal
 import params as P
 import common as C
 
-DEFAULT_JSON = r"D:\ue5\liquied\configs\tuning.json"
+DEFAULT_JSON = os.path.join(C.REPO_ROOT, "configs", "tuning.json")
 
 
 def _load_json(path):

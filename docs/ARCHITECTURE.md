@@ -43,3 +43,11 @@ changed. Re-running `bootstrap.py` is safe at any time.
   tumbler without rebuilding materials.
 - **Fast iteration** — material graph edits never touch geometry or level layout.
 - **Reproducible** — a fresh clone + one command rebuilds the whole scene.
+
+## Repo layout rationale (why `scripts/` etc. sit next to `cup/`)
+`cup/` is the UE project and stays **pure-UE**: `.uproject`, `Config/`, `Content/`,
+`Source/`. `scripts/` (build pipeline), `configs/` (tuning contract), `docs/`, and
+`tools/` are **repo-level deliverables** that operate *on* `cup/` but are not UE assets,
+so they live **alongside it, not inside it**. The pipeline locates the project via the
+`.uproject` path passed on the command line and derives its own repo root from
+`__file__`, so the whole repo can be cloned or moved anywhere with no path edits.

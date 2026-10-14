@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """Entry point: rebuild the whole scene end-to-end (decoupled, idempotent)."""
 import sys, os
-sys.path.insert(0, r"D:\ue5\liquied\scripts")
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() else os.path.abspath(".")
+sys.path.insert(0, _SCRIPT_DIR)
 
 import common as C
 import make_mpc

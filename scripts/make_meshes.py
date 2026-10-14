@@ -14,7 +14,7 @@ import unreal
 import params as P
 import common as C
 
-MESH_CACHE = r"D:\ue5\liquied\outputs\mesh_cache"
+MESH_CACHE = os.path.join(C.REPO_ROOT, "outputs", "mesh_cache")
 
 
 def _revolve(profile, segments, flip=False):

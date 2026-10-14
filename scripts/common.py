@@ -3,7 +3,11 @@
 import os
 import unreal
 
-LOG_PATH = r"D:\ue5\liquied\outputs\build_log.txt"
+# Repo root is derived from this file's location so the pipeline is location-independent.
+_THIS_FILE = os.path.abspath(__file__) if "__file__" in globals() else os.path.abspath(".")
+SCRIPTS_DIR = os.path.dirname(_THIS_FILE)
+REPO_ROOT = os.path.dirname(SCRIPTS_DIR)
+LOG_PATH = os.path.join(REPO_ROOT, "outputs", "build_log.txt")
 
 
 def log(msg):
